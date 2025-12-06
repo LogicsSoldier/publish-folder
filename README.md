@@ -3,6 +3,8 @@
 
 A simple Express.js application to quickly publish and browse folder contents via web interface. View files and folders in a clean interface and download files with a single click. It's only 300 lines of code and 2 depedencies (you really can read it.)
 
+<img width="625" alt="image" src="https://github.com/user-attachments/assets/09d846ba-7fff-45ca-b4f6-a7a4dce40c11" />
+
 <img width="625" height="372" alt="image" src="https://github.com/user-attachments/assets/764db0bc-6ed8-455e-a417-d65b32f5fc97" />
 
 ## Features
@@ -18,7 +20,7 @@ A simple Express.js application to quickly publish and browse folder contents vi
 
 ```bash
 # if you trust me and want to add the command to path so you can use it anywhere
-# (whole package -dependecies is only 300 lines of code.. only 2 dependecies)
+# (whole package -dependencies is only 300 lines of code.. only 2 dependecies)
 npm install -g @logicssoldier/publish-folder
 # OR --------
 # can also download the package from npm or github and run from the folder without needing admin privelage
