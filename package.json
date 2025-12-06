@@ -1,0 +1,30 @@
+{
+  "name": "@logicssoldier/publish-folder",
+  "version": "1.0.0",
+  "description": "Quick Express.js app to publish and browse folder contents",
+  "main": "server.js",
+  "bin": {
+    "publish-folder": "./bin/publish-folder.js"
+  },
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "keywords": [
+    "express",
+    "file-server",
+    "folder-browser",
+    "cli",
+    "publish-folder",
+    "downloader",
+    "download",
+    "web",
+    "server"
+  ],
+  "author": "LogicsSoldier@gmail.com",
+  "license": "MIT",
+  "dependencies": {
+    "archiver": "^6.0.2",
+    "express": "^4.18.2"
+  }
+}
