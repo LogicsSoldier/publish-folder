@@ -1,7 +1,9 @@
 ###### @LogicsSoldier's
 # Publish Folder
 
-A simple Express.js application to quickly publish and browse folder contents via web interface. View files and folders in a clean interface and download files with a single click. It's only 300 lines of code and 2 depedencies (you really can read it.)
+A simple Express.js application to quickly publish and browse folder contents via web interface. View files and folders in a clean interface and download files with a single click. 
+
+It's only 300 lines of code and 2 dependencies, [express](https://www.npmjs.com/package/express) & [archiver](https://www.npmjs.com/package/archiver) *-- you really can read it.*
 
 <img width="1536" height="972" alt="image" src="https://github.com/user-attachments/assets/8ff54bd0-a0e3-47eb-abfc-c0e79556e326" />
 
