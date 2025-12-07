@@ -1,10 +1,14 @@
+#!/usr/bin/env node
 const express = require('express');
 const path = require('path');
 const fs = require('fs').promises;
+const os = require('os');
+
 const archiver = require('archiver');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
+const HOST = getLocalIpAddress();
 
 // Folder to publish (can be changed via command line argument)
 const PUBLISH_FOLDER = process.argv.length > 2 ? path.resolve(process.cwd(), process.argv[2]) : process.cwd();
@@ -266,6 +270,22 @@ app.get('*', async (req, res) => {
 app.listen(PORT, () => {
   console.log(`\n🚀 File server running!`);
   console.log(`📂 Publishing folder: ${PUBLISH_FOLDER}`);
-  console.log(`🌐 Browse at: http://localhost:${PORT}`);
+  console.log(`🌐 Browse at: http://${HOST}:${PORT}`);
   console.log(`\nPress Ctrl+C to stop\n`);
 });
+
+
+function getLocalIpAddress() {
+  const networkInterfaces = os.networkInterfaces();
+  for (const devName in networkInterfaces) {
+    const iface = networkInterfaces[devName];
+
+    for (let i = 0; i < iface.length; i++) {
+      const alias = iface[i];
+      if (alias.family === 'IPv4' && alias.address !== '127.0.0.1' && !alias.internal) {
+        return alias.address;
+      }
+    }
+  }
+  return '127.0.0.1'; // Default if no suitable IP is found
+}

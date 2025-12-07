@@ -1,10 +1,10 @@
 {
   "name": "@logicssoldier/publish-folder",
-  "version": "1.0.0",
+  "version": "1.0.6",
   "description": "Quick Express.js app to publish and browse folder contents",
   "main": "server.js",
   "bin": {
-    "publish-folder": "./bin/publish-folder.js"
+    "publish-folder": "server.js"
   },
   "scripts": {
     "start": "node server.js",
